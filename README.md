@@ -1,2 +1,2 @@
 # Rundex
-## Cleaning theme built with lumberjack
+## Cleaning theme built with Lumberjack
