@@ -1,0 +1,26 @@
+body {
+    background-color: white;
+	font-family: "Roboto", sans-serif;
+	font-size: 18px;
+	line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: "Heebo", sans-serif;
+	font-weight: bold;
+	color: $secondary;
+}
+
+h4 {
+	font-size: 1.33333333333em;
+}
+
+p {
+	color: $secondary-500;
+	line-height: 30px;
+}

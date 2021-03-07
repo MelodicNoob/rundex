@@ -1,0 +1,140 @@
+#p-single-project {
+	#project {
+		text-align: center;
+		@media (min-width: $md) {
+			text-align: left;
+		}
+		.content {
+			color: $lightGray;
+			p {
+				color: $lightGray;
+			}
+			h1,
+			h2,
+			h3 {
+				color: $darkBlue;
+			}
+
+			h2:not(:first-of-type),
+			p:not(:first-of-type),
+			img:not(:first-of-type) {
+				margin-top: 30px;
+			}
+
+			h2 {
+				font-size: 2.22222222222em;
+            }
+            
+            h3 {
+                font-size: 2em;
+            }
+
+            h4 {
+                font-size: 1.8em;
+            }
+
+            h5 {
+                font-size: 1.6em;
+            }
+
+            h6 {
+                font-size: 1.4em;
+            }
+
+			ul {
+				li {
+					&::before {
+						@media (min-width: $xl) {
+							display: inline-block;
+							position: absolute;
+							left: -30px;
+							font-family: "Font Awesome 5 Free";
+							font-weight: bold;
+							content: "\f00c";
+							width: 60px;
+							height: 60px;
+							padding-top: 16px;
+							border-radius: 50%;
+							margin-right: 2em;
+							margin-left: 2em;
+							text-align: center;
+							background: #00baec;
+							color: white;
+						}
+					}
+					margin-top: 30px;
+					position: relative;
+					@media (min-width: $xl) {
+						padding-left: 5em;
+					}
+				}
+			}
+		}
+		aside {
+			.project-info,
+			.questions {
+				padding-bottom: 60px;
+				border-top: 4px solid $teritary;
+				background: $blueTint;
+			}
+			& > div {
+				margin-top: 30px;
+				@media (min-width: $md) {
+					&:nth-child(1) {
+						margin-top: 0;
+					}
+				}
+				h3 {
+					display: inline-block;
+					position: relative;
+					margin-bottom: 15px;
+					padding-bottom: 10px;
+					font-size: 1.33333333333em;
+					font-weight: 400;
+					color: $darkBlue;
+					&:before {
+						content: "";
+						position: absolute;
+						width: 40px;
+						height: 2px;
+						bottom: 0;
+						left: 1%;
+						border-bottom: 2px solid $teritary;
+					}
+				}
+				li {
+					color: #686868;
+					margin-top: 15px;
+					span {
+						font-weight: bold;
+						color: $darkBlue;
+					}
+				}
+			}
+		}
+	}
+	#portfolio {
+		.cards {
+			.card {
+				margin-top: 30px;
+				img {
+					height: 450px;
+					border-top-left-radius: 35px;
+				}
+				.text-content {
+					background: $blueTint;
+					padding: 30px 20px;
+					text-align: left;
+					h4 {
+						color: $secondary-900;
+					}
+					p {
+						margin-top: 15px;
+						font-size: 1.11111111111em;
+						color: $secondary-500;
+					}
+				}
+			}
+		}
+	}
+}

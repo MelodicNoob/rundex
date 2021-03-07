@@ -1,0 +1,147 @@
+#p-single-team {
+	.image {
+		img {
+			@media (min-width: $lg) {
+				height: 630px;
+				width: 470px;
+			}
+		}
+	}
+	#individual {
+		padding-bottom: 75px;
+		.image {
+			img {
+				@media (min-width: $lg) {
+					border-top-left-radius: 50px;
+				}
+			}
+		}
+		.text-content-bg {
+			// margin-top: 60px;
+
+			background: #f6fbff;
+			@media (min-width: $xl) {
+				height: 100%;
+			}
+			.text-content {
+				padding: 30px;
+				@media (min-width: $lg) {
+					text-align: left;
+				}
+				h2 {
+					font-size: 2.22222222222em;
+					color: $secondary-900;
+					text-transform: uppercase;
+				}
+				h3 {
+					margin-top: 20px;
+					font-size: 1em;
+					color: darken($teritary, 5%);
+				}
+				p {
+					margin-top: 40px;
+					@media (min-width: $xl) {
+						width: 70%;
+					}
+				}
+				.social-media-links,
+				.contact-info {
+					margin-top: 40px;
+					li {
+						margin-top: 10px;
+					}
+				}
+
+				.social-media-links {
+					display: flex;
+					flex-flow: row nowrap;
+					justify-content: center;
+					@media (min-width: $lg) {
+						justify-content: left;
+					}
+					li {
+						&:not(:last-child) {
+							margin-right: 20px;
+						}
+					}
+					.facebook {
+						i {
+							color: #3a589b;
+						}
+					}
+					.twitter {
+						i {
+							color: #00adee;
+						}
+					}
+					.linkedin {
+						i {
+							color: #057ab9;
+						}
+					}
+					.instagram {
+						i {
+							color: #f001c8;
+						}
+					}
+				}
+
+				.contact-info {
+					li {
+						color: rgba($secondary-500, 0.7);
+						span {
+							font-weight: 600;
+							color: $secondary-500;
+						}
+					}
+				}
+			}
+		}
+	}
+	#skills {
+		@media (min-width: $lg) {
+			text-align: left;
+		}
+		padding-top: 75px;
+		.skills-progression {
+			li {
+				margin-top: 30px;
+				div {
+					p {
+						color: rgba($secondary-900, 0.7);
+						text-align: left;
+						font-weight: 600;
+						font-size: 1.11111111111em;
+						span {
+							float: right;
+						}
+					}
+
+					.progress {
+						margin-top: 20px;
+						background: rgba($secondary-900, 0.1);
+						width: 100%;
+						height: 20px;
+						border-radius: 15px;
+						span {
+							border-top-right-radius: 15px;
+							border-bottom-right-radius: 15px;
+							background: $turquoise;
+						}
+					}
+				}
+			}
+		}
+		.image {
+			margin-top: 60px;
+			@media (min-width: $lg) {
+				margin-top: 0;
+			}
+			img {
+				@media (min-width: $lg) {
+					border-top-left-radius: 50px;
+				}
+			}
+		}
+	}
+}

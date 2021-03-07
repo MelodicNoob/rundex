@@ -1,0 +1,232 @@
+#p-front-page {
+	#about-us,
+	#features,
+	#our-team,
+	#testimonials {
+		.icon {
+			margin-bottom: 30px;
+		}
+	}
+
+	#about-us {
+		text-align: left;
+
+		.image {
+			margin-right: 0;
+
+			@media (min-width: $lg) {
+				margin-right: 40px;
+				height: 630px;
+				margin-right: 0;
+				border-top-right-radius: 10%;
+				border-bottom-left-radius: 10%;
+			}
+		}
+		.content {
+			.icon {
+				display: none;
+				@media (min-width: $xl) {
+					display: block;
+				}
+			}
+			.heading,
+			.sub-heading,
+			.text-content {
+				text-align: center;
+				@media (min-width: $xl) {
+					text-align: left;
+				}
+			}
+			.heading {
+				margin-top: 30px;
+			}
+			.text-content {
+				margin-top: 30px;
+			}
+			.stats {
+				margin-top: 15px;
+				margin-left: 0;
+				@media (min-width: $sm) {
+					margin-left: 15px;
+				}
+				@media (min-width: $xl) {
+					margin-top: 40px;
+				}
+				.stat {
+					display: block;
+					padding: 0;
+					text-align: center;
+					background: white;
+					border-radius: 0;
+					margin-top: 30px;
+					@media (min-width: $sm) {
+						margin-top: 0;
+						border-top: 30px solid white;
+					}
+					@media (min-width: $md) {
+						border-top: 0;
+						padding: 10px;
+						padding-top: 15px;
+						padding-bottom: 15px;
+					}
+					@media (min-width: $xl) {
+						&:not(:last-child) {
+							margin-right: 22px;
+						}
+						padding-top: 30px;
+						padding-bottom: 30px;
+						background: $mainBGColor;
+						border-top-right-radius: 15px;
+						border-bottom-left-radius: 15px;
+					}
+					.figure {
+						padding-top: 5px;
+						font-family: "Heebo", sans-serif;
+						font-weight: bold;
+						font-size: 30px;
+						color: $teritary;
+						margin-bottom: 20px;
+					}
+					.title {
+						font-weight: 600;
+						color: $secondary-900;
+						font-size: 16px;
+						text-transform: capitalize;
+						line-height: 1.5;
+					}
+				}
+			}
+			.tablet-wrapper {
+				display: flex;
+				justify-content: center;
+				a {
+					margin-top: 30px;
+				}
+				@media (min-width: $xl) {
+					display: block;
+				}
+			}
+		}
+	}
+
+	#features {
+		padding-top: 150px;
+		padding-bottom: 150px;
+		@media (max-width: $md) {
+			padding-top: 75px;
+			padding-bottom: 75px;
+		}
+
+		.features-img {
+			margin-top: 30px;
+			@media (min-width: $lg) {
+				height: 500px;
+				width: 100%;
+				margin-right: 0;
+			}
+
+			@media (min-width: $xl) {
+				height: 630px;
+				border-top-right-radius: 5%;
+				border-bottom-left-radius: 5%;
+			}
+		}
+
+		.cards {
+			margin-top: 30px;
+			.card {
+				@media (min-width: $lg) {
+					text-align: left;
+				}
+			}
+		}
+	}
+
+	#our-team {
+		background: $mainBGColor;
+		@media (min-width: $lg) {
+			padding-bottom: 300px;
+		}
+		.cards {
+			margin-top: 30px;
+			.card {
+				display: flex;
+				text-align: center;
+				padding: 0 40px;
+				background: white;
+
+				&:not(:first) {
+					margin-top: 30px;
+				}
+				margin-bottom: 30px;
+				@media (min-width: $lg) {
+					border-top-right-radius: 40px;
+					border-bottom-left-radius: 40px;
+				}
+				img {
+					margin-top: 30px;
+					@media (min-width: $md) {
+						border-top-right-radius: 40px;
+						border-bottom-left-radius: 40px;
+					}
+				}
+				.name {
+					margin-top: 30px;
+					color: $secondary-900;
+					text-transform: uppercase;
+					font-size: 20px;
+				}
+				.role {
+					margin-top: 30px;
+					color: $teritary;
+				}
+				.social-media-links {
+					display: inline-flex;
+					flex-flow: row nowrap;
+					padding: 0;
+					margin: 0 auto;
+					margin-top: 30px;
+					margin-bottom: 30px;
+					text-align: center;
+					li:not(:last-child) {
+						margin-right: 20px;
+					}
+					.facebook-link {
+						a {
+							color: #003072;
+						}
+					}
+					.twitter-link {
+						a {
+							color: #00baec;
+						}
+					}
+					.linkedin-link {
+						a {
+							color: #027e9f;
+						}
+					}
+					.instagram-link {
+						a {
+							color: #f001c8;
+						}
+					}
+				}
+				&:hover {
+					background: $secondary-900;
+					.name,
+					.role {
+						color: white;
+					}
+					.social-media-links {
+						li {
+							a {
+								color: white;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

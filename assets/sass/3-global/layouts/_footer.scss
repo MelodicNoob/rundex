@@ -1,0 +1,150 @@
+.g-footer {
+	
+	text-align: center;
+	background: $secondary-900;
+	color: #fffafa;
+	h4,
+	p,
+	a {
+		color: #fffafa;
+	}
+	div {
+		h4 {
+			font-size: 1.25em;
+		}
+		p {
+			margin-top: 30px;
+			@media (min-width: $md) {
+				margin-top: 0;
+			}
+		}
+		.receive-newsletter {
+			margin: 0 auto;
+			margin-top: 30px;
+			width: 300px;
+
+			input {
+				padding: 15px;
+				padding-right: 22px;
+				border: none;
+				border: 1px solid #d0d7e2;
+				border-top-left-radius: 3px;
+				border-bottom-left-radius: 3px;
+				&::placeholder {
+					color: #899cb6;
+				}
+			}
+			button {
+				padding: 17px;
+				margin-left: -2%;
+				background: #00baec;
+				border: none;
+				border: 1px solid #00baec;
+				i {
+					color: white;
+				}
+			}
+		}
+
+		ul {
+			@include margin-padding-reset;
+			margin-top: 15px;
+			@media (min-width: $lg) {
+				margin-top: 30px;
+			}
+			li {
+				margin-top: 15px;
+				color: rgba(#fffafa, 0.7);
+				a {
+					color: rgba(#fffafa, 0.7);
+				}
+			}
+		}
+	}
+	.branding {
+		.logo {
+			img {
+				width: 200px;
+			}
+		}
+		p {
+			@media (min-width: $md) {
+				margin-top: 30px;
+			}
+		}
+		padding-top: 60px;
+	}
+
+	.services,
+	.links,
+	.contact-us {
+		margin-top: 60px;
+	}
+
+	.services {
+		.services-list {
+			text-align: center;
+		}
+	}
+
+	.contact-us {
+		.social-media {
+			display: flex;
+			flex-flow: row nowrap;
+			justify-content: center;
+			li {
+				margin: 0;
+				width: 40px;
+				height: 40px;
+				padding-top: 7px;
+				border-radius: 50%;
+				background: white;
+				color: $secondary-900;
+				a {
+					color: $secondary-900;
+				}
+				&:not(:last-child) {
+					margin-right: 10px;
+				}
+			}
+		}
+		.social-media.front-page {
+			li {
+				background: $secondary-900;
+				color: white;
+				a {
+					color: white;
+				}
+			}
+		}
+	}
+
+	.copyright-info {
+		margin-top: 30px;
+		background: rgba(#0E182B, 0.1);
+		@media (min-width: $md) {
+			height: 80px;
+		}
+		.row {
+			@media (min-width: $md) {
+				height: 80px;
+			}
+		}
+		.copyright {
+			p {
+				line-height: 1em;
+			}
+		}
+	
+		.privacy-policy {
+			margin-top: 30px;
+			margin-bottom: 15px;
+			@media (min-width: $md) {
+				margin: 0 auto;
+			}
+		}
+		@media (min-width: $md) {
+			margin-top: 60px;
+		}
+	}
+}

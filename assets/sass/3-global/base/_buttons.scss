@@ -1,0 +1,21 @@
+.btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 5px;
+}
+
+.btn-lg {
+	height: 60px;
+	width: 180px;
+}
+
+.btn-md {
+	height: 50px;
+	width: 150px;
+}
+
+.btn-primary {
+	font-weight: 500;
+	color: $secondary-900;
+}

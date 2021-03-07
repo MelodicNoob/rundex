@@ -1,0 +1,82 @@
+#p-services {
+	#cleaning-services {
+		.cards {
+			.card {
+				&:first-child {
+					img {
+						border-top-left-radius: 30px;
+					}
+				}
+				img {
+					height: 300px;
+				}
+				h4 {
+					margin-top: 20px;
+					@media (min-width: $lg) {
+						margin-top: 40px;
+					}
+				}
+				p {
+					margin-top: 25px;
+					@media (min-width: $lg) {
+						margin-top: 50px;
+					}
+				}
+				ul {
+					li {
+						&::before {
+							content: "\f058";
+							font-family: "Font Awesome 5 Free";
+							color: $teritary;
+							font-weight: bold;
+							display: inline-block;
+							width: 0.1em;
+							margin-right: 1em;
+						}
+						margin-top: 15px;
+						text-align: left;
+						text-indent: -10px;
+					}
+					&:first-of-type {
+						padding-bottom: 20px;
+						border-bottom: 1px solid $secondary-900;
+						@media (min-width: $lg) {
+							padding-bottom: 0;
+							border-bottom: none;
+							border-right: 1px solid $secondary-900;
+						}
+					}
+
+					&:nth-child(2) {
+						@media (min-width: $lg) {
+							padding-left: 80px;
+						}
+					}
+					margin-top: 25px;
+					@media (min-width: $lg) {
+						margin-top: 50px;
+					}
+				}
+				.text-content {
+					padding: 10px;
+					@media (min-width: $lg) {
+						text-align: left;
+					}
+					h4 {
+						font-size: 1.66em;
+						color: $secondary-900;
+						font-weight: 400;
+						span {
+							font-weight: bold;
+						}
+					}
+				}
+				margin-top: 30px;
+				padding-bottom: 30px;
+				@media (min-width: $lg) {
+					margin-top: 60px;
+				}
+			}
+		}
+	}
+}

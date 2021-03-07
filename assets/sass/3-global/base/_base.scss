@@ -1,0 +1,45 @@
+html,
+body {
+	height: 100vh;
+}
+
+
+section {
+	text-align: center;
+	padding-top: 75px;
+	padding-bottom: 75px;
+	@media (min-width: $lg) {
+		padding-top: 150px;
+		padding-bottom: 150px;
+	}
+	
+	h2 {
+		font-family: "Roboto", sans-serif;
+		font-size: 1.66666666667em;
+		font-weight: bold;
+		color: $teritary;
+		text-transform: capitalize;
+	}
+
+	h3 {
+		line-height: 1.5;
+		margin-top: 30px;
+		font-size: 2.77777777778em;
+		font-weight: bold;
+		color: $secondary-900;
+		text-transform: capitalize;
+		@media (min-width: $xl) {
+			font-size: 50px;
+		}
+	}
+}
+
+ul {
+	list-style: none;
+	@include margin-padding-reset;
+}
+
+img {
+	width: 100%;
+	height: auto;
+}

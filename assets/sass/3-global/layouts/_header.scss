@@ -1,0 +1,50 @@
+.g-header {
+	.banner {
+		height: 200px;
+		background: $secondary-900;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		@media (min-width: $xl) {
+			height: 400px;
+		}
+	}
+}
+
+.g-main-nav {
+	background: white;
+	@include margin-padding-reset;
+	padding: 15px;
+
+	.logo {
+		align-self: center;
+		width: 200px;
+	}
+
+	@media (max-width: $sm) {
+		.mobile-quote-btn {
+			margin: 10px auto;
+		}
+	}
+}
+
+.g-navbar-nav-dropdown {
+	z-index: 2000;
+	justify-content: center;
+	@media (min-width: $lg) {
+		justify-content: start;
+	}
+}
+
+.g-banner-text {
+	display: flex;
+	flex-direction: column-reverse;
+	text-align: center;
+	h1,
+	h2 {
+		color: white;
+	}
+	h1 {
+		font-size: 3em;
+	}
+}

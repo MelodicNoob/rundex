@@ -1,0 +1,557 @@
+.g-icon {
+	width: 55px;
+}
+
+.g-card {
+	border: 0;
+	border-radius: 0;
+}
+
+.g-ad {
+	margin-top: 30px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	position: relative;
+	img {
+		border: 1px solid #e5e5e5;
+		border-radius: 0.5em;
+		height: 320px;
+	}
+	a {
+		position: absolute;
+		top: 20px;
+		font-size: 1em;
+	}
+}
+
+.g-cta {
+	padding: 25px 0;
+	color: black;
+	background: $primary;
+	text-align: center;
+	@media (min-width: $lg) {
+		text-align: left;
+	}
+	.cta-button {
+		margin-top: 30px;
+		a {
+			background: white;
+			color: $secondary-900;
+			width: 100%;
+			padding: 5px;
+			i {
+				padding-left: 20px;
+			}
+		}
+	}
+}
+
+.g-cta-phone {
+	.cta-text-content {
+		margin: 0;
+		p,
+		h4 {
+			color: #0e182b;
+		}
+
+		h4 {
+			text-transform: capitalize;
+			line-height: 1.5;
+		}
+
+		p {
+			margin-top: 30px;
+		}
+	}
+}
+
+.g-services {
+	background: $mainBGColor;
+	.icon {
+		margin-bottom: 30px;
+	}
+	.cards {
+		margin: 0 10%;
+		.card {
+			padding: 60px 20px;
+			background: $mainBGColor;
+			text-align: center;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			@media (min-width: $md) {
+				&:not(:nth-child(even)) {
+					border-right: 15px solid $mainBGColor;
+				}
+				&:not(:nth-child(odd)) {
+					border-left: 15px solid $mainBGColor;
+				}
+			}
+
+			@media (min-width: $lg) {
+				padding: 120px 50px;
+				border-top-right-radius: 120px;
+				border-bottom-left-radius: 50px;
+				background: white;
+				border-top: 30px solid $mainBGColor;
+			}
+
+			@media (min-width: $xl) {
+				border-right: 30px solid $mainBGColor;
+			}
+
+			&:hover {
+				@media (max-width: $xl) {
+					background: white;
+				}
+			}
+
+			img {
+				margin: 0 auto;
+				height: 75px;
+				width: 85px;
+			}
+
+			.text-content {
+				.name {
+					font-size: 30px;
+					margin-top: 40px;
+					margin-bottom: 40px;
+					@media (max-width: $lg) {
+						font-size: 30px;
+					}
+					@media (max-width: $lg) {
+						margin-top: 25px;
+						margin-bottom: 25px;
+					}
+				}
+				.content {
+					margin-bottom: 40px;
+					@media (max-width: $lg) {
+						margin-bottom: 25px;
+					}
+				}
+				.link {
+					font-weight: 600;
+					@include margin-padding-reset;
+					color: $teritary;
+					text-decoration: none;
+					border-bottom: 2px dashed $teritary;
+					&:hover {
+						color: $primary;
+						border-bottom: 2px dashed $primary;
+					}
+				}
+			}
+		}
+	}
+}
+
+.g-feature-card {
+	text-align: center;
+	margin-top: 30px;
+	padding: 30px 15px;
+	.icon {
+		height: 50px;
+		margin: 0 auto;
+		@media (min-width: $lg) {
+			margin: 0;
+			margin-bottom: 30px;
+		}
+	}
+	.title {
+		color: $secondary-900;
+		font-size: 1.33em;
+	}
+	.content {
+		margin-top: 15px;
+		@media (min-width: $lg) {
+			margin-top: 30px;
+		}
+		color: $teritary;
+	}
+
+	&:hover {
+		background: $secondary-900;
+		.title,
+		.content p {
+			color: white;
+		}
+	}
+}
+
+.g-features {
+	background: $mainBGColor;
+	.cards {
+		margin-top: 30px;
+		.card {
+			.icon {
+				margin-bottom: 30px;
+			}
+			@media (min-width: $md) {
+				text-align: center;
+				border-top: 30px solid $mainBGColor;
+				&:nth-child(odd) {
+					border-right: 30px solid $mainBGColor;
+				}
+			}
+
+			@media (min-width: $lg) {
+				text-align: left;
+
+				border-top-left-radius: 25px;
+			}
+
+			@media (min-width: $xl) {
+				&:not(:last-of-type) {
+					border-right: 30px solid $mainBGColor;
+				}
+			}
+		}
+	}
+}
+
+.g-appointment {
+	text-align: center;
+	@media (min-width: $lg) {
+		padding-top: 0;
+		text-align: left;
+	}
+	.icon {
+		margin: 0 auto;
+		@media (min-width: $lg) {
+			padding-top: 100px;
+		}
+		@media (min-width: $xl) {
+			margin: 0;
+		}
+	}
+
+	.heading {
+		margin-top: 30px;
+		text-align: center;
+		@media (min-width: $xl) {
+			text-align: left;
+			color: white;
+		}
+	}
+
+	.sub-heading {
+		margin-top: 30px;
+		margin-bottom: 30px;
+		text-align: center;
+		@media (min-width: $xl) {
+			text-align: left;
+			color: white;
+		}
+	}
+
+	.appointment-img {
+		height: 315px;
+		margin-right: 0;
+		@media (min-width: $md) {
+			height: 500px;
+		}
+		@media (min-width: $xl) {
+			height: 1000px;
+		}
+		&.mobile {
+			margin-top: 30px;
+		}
+	}
+
+	.background {
+		@media (min-width: $xl) {
+			background: $secondary-900;
+			height: 70%;
+		}
+	}
+
+	.request-quote {
+		margin-top: 30px;
+		@media (min-width: $md) {
+			margin-top: 0;
+		}
+		@media (min-width: $lg) {
+			margin-top: 30px;
+		}
+		padding: 0 5%;
+		background: white;
+		@media (min-width: $xl) {
+			padding-top: 45px;
+		}
+		.title {
+			font-size: 30px;
+			color: $secondary-900;
+			@media (min-width: $xl) {
+				text-align: left;
+			}
+		}
+		form {
+			margin-top: 30px;
+			input,
+			select {
+				background: $mainBGColor;
+				border: none;
+				color: $secondary-500;
+				margin-bottom: 30px;
+				font-size: 18px;
+			}
+
+			input {
+				padding: 30px;
+				border: none;
+				color: $secondary-500;
+			}
+
+			input:active {
+				background: $mainBGColor;
+			}
+
+			input:focus {
+				color: $secondary-500;
+			}
+
+			input::placeholder {
+				color: $secondary-500;
+				text-transform: capitalize;
+			}
+
+			.icon-field {
+				position: relative;
+				i {
+					position: absolute;
+					top: 20px;
+					right: 40px;
+					color: $teritary;
+				}
+			}
+
+			.select-wrapper {
+				position: relative;
+			}
+
+			.select-wrapper::before {
+				font-family: "Font Awesome 5 Free";
+				font-weight: 900;
+				content: "\f078";
+				color: $teritary;
+				display: inline-block;
+				position: absolute;
+				top: 20px;
+				right: 38px;
+				pointer-events: none;
+			}
+
+			.select-wrapper > select {
+				height: 60px;
+				appearance: none;
+				option {
+					text-transform: capitalize;
+				}
+				padding: 0 30px;
+				border: 0;
+				-webkit-appearance: none;
+			}
+
+			button[type="submit"] {
+				margin-top: 30px;
+				height: 60px;
+				text-transform: capitalize;
+				@media (min-width: $xl) {
+					height: 70px;
+				}
+			}
+		}
+	}
+}
+
+.g-testimonials {
+	.icon {
+		margin-bottom: 30px;
+	}
+
+	.testimonial-img {
+		height: 315px;
+		margin-top: 30px;
+		@media (min-width: $md) {
+			height: 500px;
+		}
+	}
+
+	.content {
+		margin-top: 30px;
+		padding-left: 20px;
+		text-align: left;
+		@media (max-width: $md) {
+			padding-left: 0;
+			text-align: center;
+		}
+		.icon {
+			margin-bottom: 0;
+			color: $teritary;
+			font-size: 60px;
+		}
+
+		.heading {
+			margin-top: 10px;
+			font-size: 1.33em;
+			line-height: 1.5;
+		}
+
+		.copy {
+			margin-top: 30px;
+			@media (min-width: $lg) {
+				margin-top: 30px;
+			}
+		}
+		.stars {
+			@include margin-padding-reset;
+			margin-top: 30px;
+			@media (min-width: $lg) {
+				margin-top: 60px;
+			}
+			display: flex;
+			flex-flow: row nowrap;
+			justify-content: center;
+			@media (min-width: $lg) {
+				justify-content: left;
+			}
+			.star {
+				margin-right: 10px;
+				color: $gold;
+			}
+		}
+
+		.info {
+			margin-top: 30px;
+			@media (min-width: $lg) {
+				margin-top: 40px;
+			}
+			.name {
+				font-size: 1.33em;
+				font-weight: bold;
+				color: $secondary-900;
+			}
+			.relation {
+				@media (min-width: $md) {
+					margin-top: 10px;
+				}
+				@media (min-width: $lg) {
+					margin-top: 20px;
+				}
+				color: rgba(14, 24, 43, 0.7);
+			}
+		}
+	}
+}
+
+.g-blog-aside {
+	padding: 0 30px;
+	padding-bottom: 75px;
+	@media (min-width: $lg) {
+		padding-top: 150px;
+		padding-bottom: 150px;
+	}
+	margin-top: 30px;
+	div {
+		text-align: left;
+		margin-top: 30px;
+		h3 {
+			color: $darkBlue;
+			font-size: 1.33333333333em;
+		}
+	}
+	.search {
+		padding: 15px 30px;
+		background: $blueTint;
+
+		form {
+			input {
+				padding: 15px;
+				border: 2px solid $turquoise;
+				width: 100%;
+				outline: 0;
+				&:focus {
+					outline: 0;
+				}
+			}
+		}
+	}
+	.category {
+		background: $blueTint;
+		@media (min-width: $lg) {
+			padding: 50px 30px 80px 30px;
+		}
+		h3 {
+			font-size: 1.33333333333em;
+			font-weight: bold;
+			margin-top: 0;
+		}
+		ul {
+			margin-top: 30px;
+			padding: 0 5%;
+			li {
+				margin-top: 30px;
+				a {
+					i {
+						vertical-align: middle;
+						font-size: 18px;
+						float: right;
+					}
+					display: inline-block;
+					width: 100%;
+					color: $lightGray;
+				}
+			}
+		}
+	}
+	.recent-news {
+		background: $blueTint;
+		@media (min-width: $lg) {
+			padding: 50px 30px 80px 30px;
+		}
+		div {
+			display: flex;
+			img {
+				width: 120px;
+				height: 100px;
+			}
+			.text-content {
+				display: flex;
+				flex-flow: column nowrap;
+				margin-top: 0;
+				padding-left: 5%;
+				h3 {
+					margin-top: 0;
+					font-family: "Roboto", sans-serif;
+					font-weight: bold;
+					font-size: 1em;
+				}
+				p {
+					color: $lightGray;
+				}
+			}
+		}
+	}
+	.popular-tags {
+		background: $blueTint;
+		@media (min-width: $lg) {
+			padding: 50px 30px 80px 30px;
+		}
+		.container,
+		.row {
+			margin-top: 0;
+		}
+		.row div {
+			height: 30px;
+			text-align: center;
+			color: $lightGray;
+			&:hover {
+				background: $primary;
+				color: $darkBlue;
+			}
+		}
+	}
+}

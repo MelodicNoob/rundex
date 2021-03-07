@@ -1,0 +1,37 @@
+.g-footer-front-page {
+	padding-top: 75px;
+	@media (min-width: $lg) {
+		padding-top: 150px;
+	}
+	background: #f6fbff;
+	footer {
+		background: #f6fbff;
+
+		h4,
+		p,
+		a {
+			color: $secondary-900;
+		}
+		div {
+			ul {
+				li {
+					a {
+						color: $secondary-900;
+					}
+					color: $secondary-900;
+				}
+			}
+		}
+		.copyright-info {
+			background: $secondary-900;
+			h4,
+			p,
+			a {
+				color: white;
+			}
+			.container {
+				background: rgba(#0e182b, 0.6);
+			}
+		}
+	}
+}

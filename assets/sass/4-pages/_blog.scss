@@ -1,0 +1,133 @@
+#p-blog {
+	#blog {
+		.post {
+			text-align: left;
+			&:not(:first-child) {
+				margin-top: 30px;
+			}
+			img {
+				border-radius: 4px;
+			}
+			ul {
+				margin-top: 30px;
+				display: flex;
+				flex-direction: row;
+				li {
+					margin-right: 15px;
+					color: $lightGray;
+					i {
+						padding-right: 5px;
+					}
+				}
+			}
+			h3 {
+				margin-top: 15px;
+				font-size: 1.66666666667em;
+				color: $darkBlue;
+			}
+			p {
+				color: $lightGray;
+			}
+			button {
+				margin: 0 auto;
+				margin-top: 30px;
+				@media (min-width: $md) {
+					margin: 0;
+					margin-top: 30px;
+				}
+				i {
+					padding-left: 15px;
+				}
+			}
+			&:nth-child(odd) {
+				button {
+					background: $teritary;
+					color: white;
+					border: none;
+				}
+			}
+		}
+		aside {
+			margin-top: 30px;
+			@media (min-width: $md) {
+				margin-top: 0;
+			}
+			padding: 0 30px;
+			div {
+				text-align: left;
+				margin-top: 30px;
+				h3 {
+					color: $darkBlue;
+					font-size: 1.33333333333em;
+				}
+			}
+			.search {
+				input {
+					padding: 15px;
+					border: 2px solid $turquoise;
+					width: 100%;
+					outline: 0;
+					&:focus {
+						outline: 0;
+					}
+				}
+			}
+			.category {
+				ul {
+					padding: 0 5%;
+					li {
+						margin-top: 15px;
+						a {
+							i {
+								vertical-align: middle;
+								font-size: 18px;
+								float: right;
+							}
+							display: inline-block;
+							width: 100%;
+							color: $lightGray;
+						}
+					}
+				}
+			}
+			.recent-news {
+				div {
+					display: flex;
+					img {
+						width: 120px;
+						height: 100px;
+					}
+					.text-content {
+						display: flex;
+						flex-flow: column nowrap;
+						margin-top: 0;
+						padding-left: 5%;
+						h3 {
+							margin-top: 0;
+							font-family: "Roboto", sans-serif;
+							font-weight: bold;
+							font-size: 1em;
+						}
+						p {
+							color: $lightGray;
+						}
+					}
+				}
+			}
+			.popular-tags {
+				.container, .row {
+					margin-top: 0;
+				}
+				.row div {
+					height: 30px;
+					text-align: center;
+					color: $lightGray;
+					&:hover {
+						background: $primary;
+						color: $darkBlue;
+					}
+				}
+			}
+		}
+	}
+}

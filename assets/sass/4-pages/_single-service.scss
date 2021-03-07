@@ -1,0 +1,145 @@
+#p-single-service {
+	margin-top: 75px;
+	margin-bottom: 75px;
+	@media (min-width: $lg) {
+		margin-top: 150px;
+		margin-bottom: 150px;
+	}
+	aside {
+		@media (min-width: $lg) {
+			padding-right: 30px;
+		}
+		.services,
+		.author {
+			padding: 10px;
+			@media (min-width: $lg) {
+				padding: 15px;
+			}
+			@media (min-width: $xl) {
+				padding: 20px;
+			}
+			border: 1px solid #e5e5e5;
+			border-radius: 0.5em;
+		}
+		.services {
+			h3 {
+				text-align: center;
+				@media (min-width: $lg) {
+					text-align: left;
+				}
+				font-size: 1.33333333333em;
+				color: $darkBlue;
+			}
+			ul {
+				padding: 0 5%;
+				li {
+					margin-top: 15px;
+					a {
+						i {
+							vertical-align: middle;
+							font-size: 18px;
+							float: right;
+						}
+						display: inline-block;
+						width: 100%;
+						color: $lightGray;
+					}
+				}
+			}
+		}
+		.author {
+			margin-top: 30px;
+			text-align: center;
+			img {
+				width: 150px;
+			}
+			p,
+			h4 {
+				margin-top: 30px;
+			}
+			h4 {
+				font-size: 1.33333333333em;
+				color: $darkBlue;
+			}
+			ul {
+				display: flex;
+				flex-flow: row;
+				justify-content: center;
+				margin-top: 15px;
+				li {
+					&:not(:last-child) {
+						margin-right: 20px;
+					}
+				}
+				a {
+					&:hover {
+						color:#00baec;
+					}
+				}
+			}
+		}
+		.ad {
+			margin-top: 30px;
+		}
+	}
+	#main-content {
+		padding-top: 0;
+		margin-top: 60px;
+
+		.content {
+			color: $lightGray;
+			p {
+				color: $lightGray;
+			}
+			h1,
+			h2,
+			h3 {
+				color: $darkBlue;
+			}
+
+			h2:not(:first-of-type),
+			p:not(:first-of-type) {
+				margin-top: 30px;
+			}
+
+			h2 {
+				font-size: 2.77777777778em;
+			}
+
+			ul {
+				li {
+					&::before {
+						@media (min-width: $xl) {
+							display: inline-block;
+							position: absolute;
+							left: -30px;
+							font-family: "Font Awesome 5 Free";
+							font-weight: bold;
+							content: "\f00c";
+							width: 60px;
+							height: 60px;
+							padding-top: 16px;
+							border-radius: 50%;
+							margin-right: 2em;
+							margin-left: 2em;
+							text-align: center;
+							background: #00baec;
+							color: white;
+						}
+					}
+					margin-top: 30px;
+					position: relative;
+					@media (min-width: $xl) {
+						padding-left: 5em;
+					}
+				}
+			}
+		}
+		@media (min-width: $md) {
+			margin-top: 0;
+		}
+		@media (min-width: $lg) {
+			text-align: left;
+		}
+	}
+}

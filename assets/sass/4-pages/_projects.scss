@@ -1,0 +1,60 @@
+#p-projects {
+	#projects {
+		ul {
+			display: flex;
+			flex-direction: column;
+			@media (min-width: $md) {
+				flex-direction: row;
+				justify-content: center;
+			}
+			li {
+				font-weight: bold;
+				margin-top: 30px;
+				&:not(:last-child) {
+					@media (min-width: $md) {
+						margin-right: 15px;
+					}
+					@media (min-width: $lg) {
+						margin-right: 30px;
+					}
+					@media (min-width: $xl) {
+						margin-right: 60px;
+					}
+				}
+				&.active {
+					color: $teritary;
+                }
+			}
+		}
+
+		.project-cards {
+			margin-top: 60px;
+			.card {
+                border: 15px solid white;
+                img {
+                    @media (min-width: $lg) {
+                        border-top-left-radius: 25px;
+                    }
+                }
+				.text-content {
+					background: $mainBGColor;
+					padding: 30px;
+					padding-right: 50px;
+					text-align: left;
+					h4 {
+						color: $secondary-900;
+					}
+					p {
+						margin-top: 30px;
+						font-size: 1.11111111111em;
+						font-weight: 600;
+						color: $secondary-500;
+					}
+				}
+			}
+		}
+	}
+	#projects-cta {
+		padding-top: 0;
+	}
+}

@@ -1,0 +1,52 @@
+#p-team {
+	#team {
+		.card {
+			margin-bottom: 30px;
+			img {
+				border-top-left-radius: 25px;
+			}
+
+			.social-media-links {
+				display: flex;
+				flex-flow: row nowrap;
+				align-items: center;
+				position: relative;
+				ul {
+                    position: absolute;
+                    top: -40px;
+                    left: 0;
+                    right: 0;
+					display: flex;
+					flex-direction: row;
+					flex: 1;
+                    justify-content: center;
+                    padding: 10px;
+                    background: $secondary-900;   
+					li {
+						margin-right: 30px;
+						a {
+							text-decoration: none;
+							color: white;
+						}
+					}
+				}
+			}
+			.text-content {
+                background: $blueTint;
+                padding: 40px 20px;
+				h4 {
+					color: $secondary-900;
+				}
+				p {
+					color: $teritary;
+				}
+				
+			}
+		}
+    }
+    
+    #features {
+		background: $mainBGColor;
+		margin-bottom: 0;
+	}
+}
