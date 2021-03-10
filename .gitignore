@@ -3,3 +3,8 @@ vendor
 
 # Frontend tooling
 node_modules
+
+assets/dist
+assets/css
+
+assets/src/sass
