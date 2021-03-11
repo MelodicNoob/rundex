@@ -6,5 +6,6 @@ return [
      */
     'menus' => [
         'main-nav' => __('Main Navigation'),
+        'primary-nav' => __('Primary Navigation')
     ],
 ];
