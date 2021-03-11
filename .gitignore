@@ -1,10 +1,12 @@
 .DS_Store
 vendor
-
-# Frontend tooling
 node_modules
 
+# Frontend tooling
 assets/dist
+
 assets/css
+assets/js/theme.js
 
 assets/src/sass
+assets/src/js/bootstrap
