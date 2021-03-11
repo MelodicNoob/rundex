@@ -1,0 +1,25 @@
+<div class="collapse navbar-collapse g-navbar-nav-dropdown" id="navbarNavDropdown">
+    <ul class="navbar-nav ml-auto">
+        {% for item in primary_menu.items %} 
+            <li class="nav-item{{ item.children ? " dropdown" : null }}">
+                {% if item.children %}
+                    <a class="nav-link dropdown-toggle"
+                        href="#"
+                        role="button" 
+                        data-toggle="dropdown"
+                        aria-haspopup="true"
+                        aria-expanded="false">
+                        {{ item.title }}
+                    </a>
+                    <div class="dropdown-menu">
+                        {% for child in item.children %}
+                            <a class="dropdown-item" href="{{ child.link }}">{{ child.title }}</a>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    <a class="nav-link" href="{{ item.link }}">{{ item.title }}</a>
+                {% endif %}
+            </li>
+        {% endfor %}
+    </ul>
+</div>
