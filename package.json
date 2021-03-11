@@ -5,10 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "assets:build": "gulp build",
-    "assets:clean": "gulp clean",
-    "assets:copy": "gulp copyAssets",
-    "assets:watch": "gulp watch"
+    "build": "gulp build",
+    "clean": "gulp clean",
+    "postclean": "gulp copyAssets",
+    "copy": "gulp copyAssets",
+    "watch": "gulp watch"
   },
   "repository": {
     "type": "git",
