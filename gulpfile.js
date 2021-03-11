@@ -68,5 +68,5 @@ exports.clean = series(cleanAssetsSrcSass, cleanAssetsDist);
 exports.copyAssets = series(copyBootstrapAssets, copyFontAwesomeAssets);
 
 exports.watch = function() {
-    watch(["assets/sass/theme.scss", "assets/js/*.js"], parallel(scss, js))
+    watch(["assets/sass/**/*.scss", "assets/js/*.js"], series(parallel(scss, js), parallel(minifyCSS, minifyJS)));
 }
