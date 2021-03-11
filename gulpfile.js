@@ -1,5 +1,6 @@
-const { dest, series, src, watch, parallel, task } = require("gulp");
+const { dest, series, src, watch, parallel } = require("gulp");
 const sass = require("gulp-sass");
+const concat = require('gulp-concat');
 const cleanCSS = require("gulp-clean-css");
 const rename = require("gulp-rename");
 const babel = require("gulp-babel");
@@ -16,22 +17,41 @@ async function cleanAssetsSrcSass() {
    await del(["assets/src/sass/**"]);
 }
 
-function copyBootstrapAssets() {
+async function cleanAssetsSrcJSBootstrap() {
+    await del(["assets/src/js/bootstrap/**"]);
+}
+
+function copyBootstrapAssetsSCSS() {
     return src("node_modules/bootstrap/scss/**")
     .pipe(dest("assets/src/sass/bootstrap"));
 }
 
-function copyFontAwesomeAssets() {
-    return src("node_modules/@fortawesome/fontawesome-free/scss/**")
+function copyFontAwesomeAssetsSCSS() {
+    return src(
+        "node_modules/@fortawesome/fontawesome-free/scss/**"
+    )
     .pipe(dest("assets/src/sass/fontawesome"));
 }
 
+function copyBootstrapAssetsJS() {
+    return src(
+        "node_modules/bootstrap/dist/js/bootstrap.bundle.js"
+    )
+    .pipe(dest("assets/src/js/bootstrap"));
+}
+
 function js() {
-    return src("assets/js/*")
+    return src([
+        "assets/src/js/bootstrap/*", 
+        "assets/src/js/custom-javascript.js", 
+        "assets/js/*", 
+        "!assets/js/theme.js"
+    ])
     .pipe(babel({
         presets: ["@babel/env"]
     }))
-    .pipe(dest("assets/dist/js"));
+    .pipe(concat("theme.js"))
+    .pipe(dest("assets/js"));
 }
 
 function minifyCSS() {
@@ -44,7 +64,7 @@ function minifyCSS() {
 }
 
 function minifyJS() {
-    return src("assets/dist/js/*.js")
+    return src("assets/js/*.js")
     .pipe(ulgify())
     .pipe(rename({
         extname: ".min.js"
@@ -63,10 +83,27 @@ exports.build = series(
     parallel(minifyCSS, minifyJS)
 );
 
-exports.clean = series(cleanAssetsSrcSass, cleanAssetsDist);
+exports.clean = parallel(
+    cleanAssetsSrcSass, 
+    cleanAssetsSrcJSBootstrap, 
+    cleanAssetsDist
+);
 
-exports.copyAssets = series(copyBootstrapAssets, copyFontAwesomeAssets);
+exports.copyAssets = series(
+    parallel(
+        copyBootstrapAssetsSCSS, 
+        copyFontAwesomeAssetsSCSS
+    ), 
+    parallel(copyBootstrapAssetsJS)
+);
 
 exports.watch = function() {
-    watch(["assets/sass/**/*.scss", "assets/js/*.js"], series(parallel(scss, js), parallel(minifyCSS, minifyJS)));
+    watch([
+        "assets/sass/**/*.scss", 
+        "assets/js/*.js", 
+        "!assets/js/theme.js"], 
+        series(parallel(scss, js), 
+        parallel(minifyCSS, minifyJS)
+        )
+    );
 }
