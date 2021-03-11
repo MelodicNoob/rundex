@@ -19,7 +19,7 @@ class Lumberjack extends LumberjackCore
         // versatile than Wordpress's wp_nav_menu. (You need never again rely on a
         // crazy "Walker Function!")
         $context['menu'] = new Menu('main-nav');
-
+        $context['primary_menu'] = new Menu('primary-nav');
         return $context;
     }
 }
