@@ -13,6 +13,10 @@ class Lumberjack extends LumberjackCore
         $context['is_front_page'] = is_front_page();
         $context['is_logged_in'] = is_user_logged_in();
 
+        // Services section customizer data
+        $context['services_heading'] = get_theme_mod( 'services-heading' );
+        $context['services_sub_heading'] = get_theme_mod( 'services-sub-heading' );
+
         // In Timber, you can use TimberMenu() to make a standard Wordpress menu available to the
         // Twig template as an object you can loop through. And once the menu becomes available to
         // the context, you can get items from it in a way that is a little smoother and more
