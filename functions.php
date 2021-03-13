@@ -34,3 +34,8 @@ function setup_rundex_js() {
     );
     wp_enqueue_script('rundex-js');
 }
+
+
+// Rundex Customizers
+require_once get_template_directory() . '/customizers/class-rundex-front-page-customizer.php';
+new Rundex_Front_Page_Customizer();
